@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern gradient backgrounds */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    /* Cards with glass morphism effect */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 5% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Deep blue primary colors */
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 100% 65%;
+
+    /* Elegant secondary colors */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+
+    /* Vibrant purple accent colors with electric feel */
+    --accent: 280 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 280 100% 75%;
+    
+    /* Electric accent for highlights */
+    --electric: 200 100% 70%;
+    --electric-glow: 200 100% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 220 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Beautiful gradients with deep blues, vibrant purples, and electric accents */
+    --gradient-primary: linear-gradient(135deg, hsl(220 100% 50%), hsl(280 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 5% 6%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 100% 65%), hsl(280 100% 75%));
+    --gradient-electric: linear-gradient(135deg, hsl(200 100% 70%), hsl(280 100% 60%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(220 100% 50% / 0.3), transparent 70%);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Glass morphism */
+    --glass-bg: hsla(240, 10%, 8%, 0.7);
+    --glass-border: hsla(0, 0%, 100%, 0.1);
+    --glass-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.3);
+
+    /* Glows and shadows with new color scheme */
+    --shadow-elegant: 0 10px 30px -10px hsl(220 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(220 100% 65% / 0.4);
+    --shadow-accent: 0 0 20px hsl(280 100% 60% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 220 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 220 100% 50%;
+  }
+
+  .dark {
+    /* Same colors for consistency - this design is inherently dark */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 5% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+    --accent: 280 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 220 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
